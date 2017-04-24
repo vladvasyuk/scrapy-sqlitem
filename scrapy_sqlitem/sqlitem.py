@@ -1,6 +1,7 @@
 from scrapy.item import Field, Item, ItemMeta
 
 from sqlalchemy.sql import and_
+from six import with_metaclass
 
 
 class SqlAlchemyItemMeta(ItemMeta):
@@ -26,9 +27,7 @@ class SqlAlchemyItemMeta(ItemMeta):
         return cls
 
 
-class SqlItem(Item):
-
-    __metaclass__ = SqlAlchemyItemMeta
+class SqlItem(with_metaclass(SqlAlchemyItemMeta, Item)):
 
     sqlmodel = None
 
