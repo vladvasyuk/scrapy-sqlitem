@@ -12,7 +12,7 @@ class SqlAlchemyItemMeta(ItemMeta):
         if cls.sqlmodel is not None:
             if cls.sqlmodel.__class__.__name__ == 'Table':
                 cls.table = cls.sqlmodel
-            elif cls.sqlmodel.__class__.__name__ == 'DeclarativeMeta':
+            else:
                 cls.table = cls.sqlmodel.__dict__['__table__']
 
             cls.primary_keys = cls.table.primary_key.columns.keys()
