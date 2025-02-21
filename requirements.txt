@@ -1,3 +1,4 @@
 Scrapy>=0.24.5
 sqlalchemy
 six
+setuptools>=70.0.0 # not directly required, pinned by Snyk to avoid a vulnerability
