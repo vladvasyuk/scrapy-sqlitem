@@ -1,3 +1,4 @@
-Scrapy>=0.24.5
+Scrapy>=2.14.0
 sqlalchemy
 six
+urllib3>=2.6.3 # not directly required, pinned by Snyk to avoid a vulnerability
