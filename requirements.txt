@@ -1,3 +1,4 @@
 Scrapy>=0.24.5
 sqlalchemy
 six
+pyasn1>=0.6.2 # not directly required, pinned by Snyk to avoid a vulnerability
